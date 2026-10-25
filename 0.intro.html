@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Static Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+
+
+
+<body>
+
+
+
+<!-- Navigation -->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="0.intro.html">0.Intro</a>
+  <a href="1.bootstrap.html">1.Bootstrap</a>
+  <a href="2.cni.html">2.Setup CNI</a>
+  <a href="3.ingress.html">3.Setup Ingress</a>
+  <a href="4.clusterissuer.html">4.Setup ClusterIssuer</a>
+  <a href="5.csi.html">5.Setup CSI</a>
+
+</div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Chapters Select</span>
+
+<h1>Intro</h1>
+<p>This small blog is just used to document how I deploy my k8s cluster, what components I use and what configuration I use in my current cluster. NOTE: This is not a tutorial, It is just documentation for my own sake, follow at your own risk.</p>
+<p>Commands will use can be copied directly by clicking them and will look like this. Example:</p>
+
+<!-- The button used to copy the text -->
+
+<div class="tooltip">
+  <button class="code_example" type="button" value="kubectl get nodes">
+    <span class="tooltiptext">Click to copy</span>
+    kubectl get nodes
+  </button>
+</div>
+
+<p>Here is another example, run the following command to install the helm file.</p>
+<div class="tooltip">
+  <button class="code_example" type="button" value="helm install <RELEASE_NAME> oci://ghcr.io/nginx/charts/nginx-ingress --version 0.0.0-edge">
+    <span class="tooltiptext">Click to copy</span>
+    helm install <RELEASE_NAME> oci://ghcr.io/nginx/charts/nginx-ingress --version 0.0.0-edge
+  </button>
+</div>
+
+<p>Most of my K8s installations and tutorials run my raspberry PIs, therefore if you choose to follow this tutorial and you run newer ARM cpus or X64, you might run into weird issues.</p>
+
+
+<p>Lastly, the main operating system I used for K8S is Talox Linux due to the easy of setting it up, if you are running K8S on another plattform, you might run into weird issues.</p>
+
+</body>

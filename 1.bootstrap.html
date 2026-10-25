@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Static Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+
+
+
+<body>
+
+<script src="script.js"></script>
+
+
+<!-- Navigation -->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="0.intro.html">0.Intro</a>
+  <a href="1.bootstrap.html">1.Bootstrap</a>
+  <a href="2.cni.html">2.Setup CNI</a>
+  <a href="3.ingress.html">3.Setup Ingress</a>
+  <a href="4.clusterissuer.html">4.Setup ClusterIssuer</a>
+  <a href="5.csi.html">5.Setup CSI</a>
+
+</div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Chapters Select</span>
+<h1>Bootstrap</h1>
+<p>Click on the element below to open the side navigation menu.</p>
+<h2>Preparing Talos Linux config</h2>
+
+<h3>1.Control planes</h3>
+<p>1. I usually start by identifying the disks that are availble to my nodes: </p>
+<div class="tooltip">
+  <button class="code_example" type="button" value="talosctl get disk -n 10.10.19.131 --insecure">
+    <span class="tooltiptext">Click to copy</span>
+    talosctl get disk -n 10.10.19.236 --insecure
+  </button>
+</div>
+<p>OUTPUT:</p>
+<pre class="terminal"><code>
+NODE           NAMESPACE   TYPE   ID        VERSION   SIZE     READ ONLY   TRANSPORT   ROTATIONAL   WWID   MODEL   SERIAL
+10.10.19.131   runtime     Disk   loop0     2         4.1 kB   true
+10.10.19.131   runtime     Disk   loop1     2         135 kB   true
+10.10.19.131   runtime     Disk   loop2     2         561 kB   true
+10.10.19.131   runtime     Disk   loop3     2         84 MB    true
+10.10.19.131   runtime     Disk   mmcblk1   2         64 GB    false       mmc                                     0xb0ef2731
+</code></pre>
+
+
+</p>2. getting a template from on of my nodes running Talos Linux with:</p>
+<div class="tooltip">
+  <button class="code_example" type="button" value="kubectl get nodes">
+    <span class="tooltiptext">Click to copy</span>
+    kubectl get nodes
+  </button>
+</div>
+
+<h3>2.Workers</h3>
+<h3>3.Storage-workers</h3>
+
+
+<h3>1.</h3>
+</body>
